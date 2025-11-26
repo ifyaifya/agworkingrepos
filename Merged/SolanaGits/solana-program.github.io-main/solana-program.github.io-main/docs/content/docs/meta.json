@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "---Tokens---",
+    "token",
+    "token-2022",
+    "associated-token-account",
+    "confidential-balances",
+    "transfer-hook-interface",
+    "token-wrap",
+    "---Staking---",
+    "stake-pool",
+    "single-pool",
+    "---Other---",
+    "...",
+    "!index"
+  ]
+}

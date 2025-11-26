@@ -1,0 +1,181 @@
+/* -------- */
+/* Colours. */
+/* -------- */
+
+@theme {
+    --color-fd-background: var(--color-linen-100);
+    --color-fd-foreground: var(--color-linen-900);
+    --color-fd-border: var(--color-linen-300);
+    --color-fd-muted: var(--color-linen-200);
+    --color-fd-muted-foreground: var(--color-linen-500);
+    --color-fd-popover: var(--color-linen-200);
+    --color-fd-popover-foreground: var(--color-linen-900);
+    --color-fd-card: var(--color-linen-200);
+    --color-fd-card-foreground: var(--color-linen-800);
+    --color-fd-primary: var(--color-coral-400);
+    --color-fd-primary-foreground: var(--color-linen-100);
+    --color-fd-secondary: var(--color-mauve-400);
+    --color-fd-secondary-foreground: var(--color-linen-100);
+    --color-fd-accent: var(--color-linen-300);
+    --color-fd-accent-foreground: var(--color-linen-900);
+}
+
+.dark {
+    --color-fd-background: var(--color-mauve-900);
+    --color-fd-foreground: var(--color-mauve-100);
+    --color-fd-border: var(--color-linen-700);
+    --color-fd-muted: var(--color-linen-800);
+    --color-fd-muted-foreground: var(--color-linen-400);
+    --color-fd-popover: var(--color-mauve-900);
+    --color-fd-popover-foreground: var(--color-linen-50);
+    --color-fd-card: var(--color-linen-800);
+    --color-fd-card-foreground: var(--color-linen-200);
+    --color-fd-primary: var(--color-coral-400);
+    --color-fd-primary-foreground: var(--color-linen-100);
+    --color-fd-secondary: var(--color-linen-800);
+    --color-fd-card-foreground: var(--color-linen-200);
+    --color-fd-accent: var(--color-linen-500);
+    --color-fd-accent-foreground: var(--color-linen-300);
+}
+
+/* ------- */
+/* Navbar. */
+/* ------- */
+
+#nd-nav {
+    --spacing-fd-container: var(--spacing-home-container);
+    --color-fd-secondary: var(--color-fd-background);
+    left: 0; /* overrides: left-1/2 */
+    max-width: 100%; /* overrides: max-w-fd-container */
+    translate: none; /* overrides: -translate-x-1/2 */
+    margin: 0; /* overrides: lg:mt-2 */
+    width: 100%; /* overrides: w-full lg:w-[calc(100%-1rem)] */
+    border: none; /* overrides: lg:border border-b border-fd-foreground/10 */
+    border-bottom: 1px solid var(--color-fd-border);
+    box-shadow: none; /* overrides: lg:shadow */
+    border-radius: 0; /* overrides: lg:rounded-2xl */
+}
+
+#nd-home-layout {
+    @apply pt-14 md:pt-18; /* overrides: pt-14 */
+}
+
+#nd-nav nav {
+    @apply h-14 md:h-18; /* overrides: h-14 */
+}
+
+#nd-nav > div:first-child {
+    @apply max-w-fd-container mx-auto;
+}
+
+/* -------- */
+/* Sidebar. */
+/* -------- */
+
+#nd-sidebar {
+    background-color: var(--color-fd-background);
+}
+
+.dark #nd-sidebar {
+    --color-fd-muted-foreground: var(--color-linen-400);
+}
+
+/* --------------- */
+/* Search buttons. */
+/* --------------- */
+
+#nd-sidebar button[data-search-full],
+#nd-nav button[data-search-full] {
+    @apply bg-linen-200 hover:bg-linen-50 dark:bg-mauve-800 dark:hover:bg-mauve-900;
+}
+
+/* ----- */
+/* Tabs. */
+/* ----- */
+
+.fd-tabs {
+    background-color: inherit;
+    --color-fd-border: var(--color-mauve-400);
+    --color-fd-secondary: var(--color-mauve-400);
+    --color-fd-muted-foreground: var(--color-mauve-200);
+}
+
+.fd-tabs > div[role='tablist'] {
+    --color-fd-primary: var(--color-linen-100);
+    --color-fd-accent-foreground: var(--color-linen-100);
+}
+
+.dark .fd-tabs {
+    --color-fd-border: var(--color-mauve-700);
+    --color-fd-secondary: var(--color-mauve-700);
+    --color-fd-muted-foreground: var(--color-mauve-200);
+}
+
+.dark .fd-tabs > div[role='tablist'] {
+    --color-fd-primary: var(--color-linen-100);
+    --color-fd-accent-foreground: var(--color-linen-100);
+}
+
+/* ----- */
+/* Code. */
+/* ----- */
+
+.fd-codeblock {
+    --color-fd-muted: var(--color-mauve-400);
+    --color-fd-muted-foreground: var(--color-linen-100);
+    --color-fd-secondary: var(--color-mauve-200);
+    --color-fd-border: var(--color-mauve-400);
+}
+
+.dark .fd-codeblock {
+    --color-fd-muted: var(--color-mauve-700);
+    --color-fd-muted-foreground: var(--color-linen-200);
+    --color-fd-secondary: var(--color-mauve-800);
+    --color-fd-border: var(--color-mauve-700);
+}
+
+#hero-code .fd-codeblock pre {
+    @apply p-4 md:p-6 lg:p-6;
+}
+
+#hero-code .fd-codeblock pre > code {
+    @apply text-sm md:text-base lg:text-base;
+}
+
+/* ------ */
+/* Steps. */
+/* ------ */
+
+.fd-steps {
+    --color-fd-border: var(--color-linen-300);
+}
+
+.fd-step::before {
+    font-family: var(--font-title);
+    font-size: 0.85rem;
+    --color-fd-secondary: var(--color-linen-400);
+}
+
+.dark .fd-steps {
+    --color-fd-border: var(--color-linen-700);
+}
+
+.dark .fd-step::before {
+    --color-fd-secondary: var(--color-linen-600);
+}
+
+/* ------ */
+/* Cards. */
+/* ------ */
+
+.fd-card {
+    @apply bg-linen-200 hover:bg-linen-300 dark:bg-linen-800 dark:hover:bg-linen-700;
+}
+
+/* ------------------ */
+/* Prev/Next Buttons. */
+/* ------------------ */
+
+#nd-page > article > div:last-child > a {
+    @apply bg-linen-100 hover:bg-linen-200 dark:bg-mauve-900 dark:hover:bg-linen-800;
+}

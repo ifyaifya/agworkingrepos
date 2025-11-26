@@ -1,0 +1,56 @@
+{
+    "name": "@solana/kit-docs",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "build": "NODE_OPTIONS='--max-old-space-size=8192' next build",
+        "dev": "NODE_OPTIONS=\"--localstorage-file=$(mktemp)\" next dev --turbo",
+        "start": "next start",
+        "postinstall": "fumadocs-mdx",
+        "prebuild": "./build-api-docs.sh",
+        "predev": "./build-api-docs.sh"
+    },
+    "dependencies": {
+        "@inkeep/cxkit-react": "^0.5.96",
+        "fumadocs-core": "15.2.10",
+        "fumadocs-docgen": "^2.0.0",
+        "fumadocs-mdx": "11.6.1",
+        "fumadocs-twoslash": "^3.1.1",
+        "fumadocs-ui": "15.2.10",
+        "lucide-react": "^0.484.0",
+        "next": "15.3.5",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "twoslash": "^0.3.1"
+    },
+    "devDependencies": {
+        "@solana-program/address-lookup-table": "^0.7.0",
+        "@solana-program/compute-budget": "^0.8.0",
+        "@solana-program/memo": "^0.7.0",
+        "@solana-program/system": "^0.7.0",
+        "@solana-program/token": "^0.5.1",
+        "@solana/compat": "3.0.0-canary-20250811123225",
+        "@solana/kit": "3.0.0-canary-20250811123225",
+        "@solana/react": "3.0.0-canary-20250811123225",
+        "@solana/web3.js": "^1.98.2",
+        "@solana/webcrypto-ed25519-polyfill": "3.0.0-canary-20250811123225",
+        "@tailwindcss/postcss": "^4.1.4",
+        "@types/mdx": "^2.0.13",
+        "@types/node": "22.13.8",
+        "@types/react": "^19.0.10",
+        "@types/react-dom": "^19.0.4",
+        "eslint": "^8",
+        "eslint-config-next": "15.3.5",
+        "postcss": "^8.5.3",
+        "tailwindcss": "^4.1.4",
+        "typescript": "^5.8.3",
+        "vercel": "^48.5.0"
+    },
+    "pnpm": {
+        "overrides": {
+            "@vercel/node>path-to-regexp": "^6.3.0",
+            "@vercel/remix-builder>path-to-regexp": "^6.3.0"
+        }
+    },
+    "packageManager": "pnpm@10.4.1"
+}
